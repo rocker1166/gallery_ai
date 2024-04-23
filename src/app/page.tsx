@@ -8,14 +8,17 @@ console.log(post)
   return (
     <main>
       
-     <div>
+     <div className=" m-7 flex flex-wrap justify-center gap-4 p-4">
       {post.map((post) => (
-        <div key={post.id}>{post.name}</div>
+        <div className=" bg-slate-500 flex h-48 w-48 flex-col" key={post.id}>{post.name}</div>
       )) 
         
       }
-      <h1 className=" text-[240px] font-extrabold text-red-800 ">grgreg</h1>
+      
      </div>
+     <div>
+      <h1 className=" text-[24px] font-extrabold text-red-800  relative sm:text-[200px] text-center my-6 font-serif">Suman</h1>
+      </div>
     </main>
   );
 }

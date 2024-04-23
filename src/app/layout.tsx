@@ -1,13 +1,7 @@
 import "~/styles/globals.css";
 import Navbar from "./_components/navbar";
 
-import { Inter } from "next/font/google";
 
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
 
 export const metadata = {
   title: "Create T3 App",
