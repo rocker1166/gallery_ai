@@ -2,8 +2,7 @@ import { createUploadthing, type FileRouter } from "uploadthing/next";
 import { UploadThingError } from "uploadthing/server";
 import { auth } from "@clerk/nextjs/server";
  import { db } from "~/server/db";
-import { Name } from "drizzle-orm";
-import { url } from "inspector";
+
 import { posts } from "~/server/db/schema";
 const f = createUploadthing();
  
@@ -35,7 +34,7 @@ export const ourFileRouter = {
 
     })
  
-      console.log("file url", file.url);
+      
  
       // !!! Whatever is returned here is sent to the clientside `onClientUploadComplete` callback
       return { uploadedBy: metadata.userId };
