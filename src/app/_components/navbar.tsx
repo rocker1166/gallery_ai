@@ -1,8 +1,12 @@
+"use client"
 import React from 'react'
+import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+import { UploadButton } from '~/utilis/uploadthing'
 
 function Navbar() {
+  const router = useRouter();
   return (
     <div className='object-fill bg-gradient-to-r from-black-500 to-blue-500 border  border-black hover:border-dotted '>
    <nav className='flex justify-between mx-4  rounded-xl relative'>
@@ -11,13 +15,20 @@ function Navbar() {
       <li><Link href="/">Home</Link></li>
       <li><Link href="/doc">Doc</Link></li>
       <li><Link href="/about">About</Link></li>
-      <li><SignedOut>
+    
+     <li><SignedOut>
         <SignInButton />
         </SignedOut>
+        <div className='flex justify-between gap-3 '>
         <SignedIn>
+
+
+          <UploadButton endpoint='imageUploader' onClientUploadComplete={() =>{router.refresh(); }  } />
           <UserButton />
         </SignedIn>
+        </div>
         </li>
+        
     </ul>
    </nav>
    </div>
