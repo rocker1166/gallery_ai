@@ -4,7 +4,7 @@ import { auth } from "@clerk/nextjs/server";
 
 export async function getmypost(){
 const user = auth();
-if (!user.userId) throw new Error("Unauthorized");
+//if (!user.userId) throw new Error("Unauthorized");
 
 
 
