@@ -21,7 +21,7 @@ async function picture() {
     <div className="absolute w-full flex place-content-center mt-20" key={post.id}>
   <p>{post.name}</p>
     </div>
-    <button className="absolute left-1/4 bottom-4 bg-white text-black font-bold rounded-lg h-10 w-48"><a href={post.url} download >Download</a>
+    <button className="absolute left-1/4 bottom-4 bg-white text-black font-bold rounded-lg h-10 w-48"><a href={post.url}  >Download</a>
 </button>
   </div>
 </div>

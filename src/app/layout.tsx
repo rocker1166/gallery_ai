@@ -6,6 +6,7 @@ import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { extractRouterConfig } from "uploadthing/server";
  
 import { ourFileRouter } from "~/app/api/uploadthing/core";
+import Nav2 from "./_components/nav2";
 
 
 export const metadata = {
