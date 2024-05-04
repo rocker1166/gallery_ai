@@ -22,13 +22,14 @@ import Link from "next/link";
           {post.name}
         </CardItem>
         <CardItem translateZ="100" className="w-full mt-4">
+        <Link href={`/img/${post.id}`}>
           <Image
             src={post.url}
             height="1700"
             width="1200"
             className="h-60 w-full  place-content-center rounded-xl group-hover/card:shadow-xl"
             alt="thumbnail"
-          />
+          /></Link>
         </CardItem>
         <div className="flex justify-between items-center mt-20">
           <CardItem

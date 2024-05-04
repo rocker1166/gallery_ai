@@ -14,3 +14,14 @@ const post = await db.query.posts.findMany({
   }) ;
   return post;
 }
+
+export async function getImage(id: number) {
+  const user= auth();
+  const image = await db.query.posts.findFirst({
+    where: (model, {eq}) => eq(model.id,id),
+
+  }) ;
+  if (!image) throw new Error("not found");
+  if (image.userId !== user.userId) throw new Error("Unauthorized");
+  return image;
+}

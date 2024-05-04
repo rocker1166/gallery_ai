@@ -6,7 +6,7 @@ import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { extractRouterConfig } from "uploadthing/server";
  
 import { ourFileRouter } from "~/app/api/uploadthing/core";
-import Nav2 from "./_components/nav2";
+
 
 
 export const metadata = {
@@ -16,9 +16,11 @@ export const metadata = {
 };
 
 export default function RootLayout({
-  children,
+  children, modal
 }: {
   children: React.ReactNode;
+  modal: React.ReactNode;
+
 }) {
   return (
     <ClerkProvider>
@@ -37,6 +39,8 @@ export default function RootLayout({
       <body className=" min-h-screen bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
       <Navbar />
      {children}
+     {modal}
+<div id="model-root" />
       </body>
     </html>
     </ClerkProvider>
